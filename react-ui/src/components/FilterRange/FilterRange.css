@@ -1,0 +1,27 @@
+.filter-textbox {
+    flex: 2;
+    padding: 5px 0px;
+    font-size: 1.2em;
+}
+
+.filter-range-label {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    margin: 3px;
+    flex-direction: row;
+}
+
+.filter-range-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+@media only screen and (max-width: 535px) {
+    .filter-textbox {
+        padding: 5px 0px;
+        font-size: 1.2em;
+    }
+}

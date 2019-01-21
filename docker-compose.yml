@@ -1,0 +1,43 @@
+version: '3'
+services:
+  web:
+    build: react-ui
+    ports:
+     - "9000:80"
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.1
+  redis:
+    image: "cragg/practice-docker"
+  spring-backend:
+    build: products-api
+    ports:
+     - "8080:8080"
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.2
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - grocery-db:/var/lib/mysql
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.3
+volumes:
+  grocery-db:
+
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

@@ -1,0 +1,97 @@
+.filter-container-active {
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    animation-name: slide-out;
+    animation-duration: .3s;
+    z-index: 100;
+    -webkit-box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 30px 30px 0px #00000024;
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.34);
+}
+
+@keyframes slide-out {
+    from {
+        transform: translate(-100%, 0px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        visibility: visible;
+        transform: translate(0%, 0px);
+    }
+    to {
+        visibility: visible;
+        transform: translate(-100%, 0px);
+    }
+}
+
+.filter-button {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    border: 0;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+}
+
+.filter-button-wrapper {
+    width: 100%;
+    background-color: red;
+    margin: 0px;
+    z-index: 110;
+    -webkit-box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 8px 15px 0px #00000024;
+    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.14);
+}
+
+.filter-container-hidden {
+    visibility: hidden;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    animation-name: slide-in;
+    animation-duration: .3s;
+    z-index: 100;
+    -webkit-box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 30px 30px 0px #00000024;
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.34);
+}
+
+.filter-container-wrapper {
+    margin-top: 0px;
+    padding: 0;
+}
+
+.filter-title {
+    color: white;
+    font-weight: bold;
+    flex: 1;
+    font-size: 1.5em;
+}
+
+.filter-wrapper {
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 535px) {
+    .filter-title {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .filter-wrapper {
+        margin: 10px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+}
