@@ -12,7 +12,8 @@ This is a React application that display a list of products and their details. I
 - Docker
 - Docker Compose
 - Babyl
-- Has enyzme and jest for testing, but I never got around to using it.
+- Jest
+- Enzyme
 - Setup for AWS, but not leveraged.
 - npm
 - node
