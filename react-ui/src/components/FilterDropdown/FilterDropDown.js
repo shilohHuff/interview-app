@@ -21,9 +21,9 @@ class FilterDropdown extends React.Component {
     let dropdownOptions = []
     let dropdownValues = this.props.dropdownValues;
 
-    dropdownValues.forEach((dropdownValue) => {
+    dropdownValues.forEach((dropdownValue, index) => {
       dropdownOptions.push(
-        <option className='filter-dropdown-item' value={dropdownValue}>{titleCase(dropdownValue)}</option>
+        <option key={dropdownValue+index} className='filter-dropdown-item' value={dropdownValue}>{titleCase(dropdownValue)}</option>
       )
     })
 

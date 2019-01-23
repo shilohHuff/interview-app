@@ -32,10 +32,10 @@ const getClassForDepartment = (department) => {
       case 'Grocery':
         classes.push('department-groceries');
         break;
-      case 'Produce':
+      case 'Pharmacy':
         classes.push('department-pharmacy');
         break;
-      case 'Pharmacy':
+      case 'Produce':
         classes.push('department-produce');
         break;
       default:

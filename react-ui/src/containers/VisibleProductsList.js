@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import ProductsList from '../components/ProductsList'
+import ProductsList from '../components/ProductsList/ProductsList'
 import { VisibilityFilters, addProduct } from '../redux/actions/actions'
 
 //The responsibility of this class is to wire up the product list with the filtered products pulled from state.

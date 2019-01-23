@@ -40,8 +40,8 @@ class FilterRange extends React.Component {
     return (  
       <div className='filter-wrapper'>
         <span className='filter-title'>{this.props.labelText}</span>
-        <div className='filter-range-container'><span className='filter-range-label'>From</span><input onChange={this.onChangeMin.bind(this)}/></div>
-        <div className='filter-range-container'><span className='filter-range-label'>To</span><input onChange={this.onChangeMax.bind(this)}/></div>
+        <div className='filter-range-container'><span className='filter-range-label'>From</span><input id={this.props.updateFilterKey+'min'} onChange={this.onChangeMin.bind(this)}/></div>
+        <div className='filter-range-container'><span className='filter-range-label'>To</span><input id={this.props.updateFilterKey+'max'} onChange={this.onChangeMax.bind(this)}/></div>
       </div>
     );
   }
